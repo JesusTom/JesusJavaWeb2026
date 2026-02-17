@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 @WebServlet(urlPatterns = "/myServlet")
 public class MyServlet extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request,
+	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
 		response.setContentType("text/html");
@@ -22,13 +22,14 @@ public class MyServlet extends HttpServlet {
 		out.println("<head><title>HTML Forms con Servlet</title></head>");
 		out.println("<body>");
 		out.println("<h1>HTML Forms</h1>");
-		out.println("<form action="/MyServlet2">");
-out.println("<body>");
-		out.println("<label for="fname">First name:</label><br>");
-		out.println("<input type="text" id="fname" name="fname" value="John"><br>");
-		out.println("<label for="lname">Last name:</label><br>");
-		out.println("<input type="text" id="lname" name="lname" value="Doe"><br><br>");
-		out.println("<input type="submit" value="Submit">");
+		out.println("<form action='/MyServlet2'>");
+		out.println("<body>");
+		out.println("<label for='name'>First name:</label><br>");
+		out.println("<label for='name'>First name:</label><br>");
+		out.println("<input type='text' id='name' name='name' value='Jesus'><br>");
+		out.println("<label for='lname'>Last name:</label><br>");
+		out.println("<input type='text' id='lname' name='lname' value='Tomas'><br><br>");
+		out.println("<input type='submit' value='Submit'>");
 		out.println("</form> ");
 		out.println("<p><a href=\"/myServlet2\">Vamos al otro Servlet</a></p>");
 		out.println("</body></html>");	
