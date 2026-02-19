@@ -34,4 +34,7 @@ public class MyServlet extends HttpServlet {
 		out.println("<p><a href=\"/myServlet2\">Vamos al otro Servlet</a></p>");
 		out.println("</body></html>");	
 	}
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		doPost();
 }
